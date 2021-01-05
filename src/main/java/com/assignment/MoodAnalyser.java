@@ -3,7 +3,7 @@ package com.assignment;
 public class MoodAnalyser {
     private String message;
 
-    public  MoodAnalyser () {
+    public MoodAnalyser() {
     }
 
     public MoodAnalyser(String message) {
@@ -14,11 +14,10 @@ public class MoodAnalyser {
         try {
             if (message.contains("I am in Sad Mood")) {
                 return "SAD";
-            }
-            else {
+            } else {
                 return "HAPPY";
             }
-        }catch(NullPointerException e) {
+        } catch (NullPointerException e) {
             return "HAPPY";
         }
     }

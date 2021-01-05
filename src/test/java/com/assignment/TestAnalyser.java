@@ -33,13 +33,12 @@ public class TestAnalyser {
 
     @Test
     public void given_Empty_ShouldReturnHappy() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("");
+        MoodAnalyser moodAnalyser = new MoodAnalyser(" ");
         try {
             moodAnalyser.analyseMood();
         } catch (MoodAnalyserException e) {
             Assert.assertEquals(MoodAnalyserException.ExceptionType.ENTERED_EMPTY, e.getType());
         }
     }
-
 }
 

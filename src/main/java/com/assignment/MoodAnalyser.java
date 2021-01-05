@@ -1,14 +1,25 @@
 package com.assignment;
 
 public class MoodAnalyser {
-    public MoodAnalyser() {
-        // TODO Auto-generated constructor stub
+    private String message;
+
+    public  MoodAnalyser () {
     }
 
-    public String analyseMood(String message) {
-        if(message.contains("I am in Sad Mood"))
-          return "SAD";
-        else
+    public MoodAnalyser(String message) {
+        this.message = message;
+    }
+
+    public String analyseMood() {
+        try {
+            if (message.contains("I am in Sad Mood")) {
+                return "SAD";
+            }
+            else {
+                return "HAPPY";
+            }
+        }catch(NullPointerException e) {
             return "HAPPY";
-       }
+        }
+    }
 }

@@ -11,6 +11,6 @@ public class MoodAnalyserException extends Exception{
     public MoodAnalyserException(ExceptionType type, String message) {
         super(message);
         this.type = type;
-    }
+        }
     }
 
